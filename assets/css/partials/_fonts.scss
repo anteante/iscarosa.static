@@ -1,15 +1,5 @@
 @font-face {
   font-display: swap;
-  font-family: "ATC Arquette Bold";
-  src: url("/assets/fonts/ATCArquette-Bold.woff2") format("woff2"),
-    url("/assets/fonts/ATCArquette-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-display: swap;
   font-family: "ATC Arquette Regular";
   src: url("/assets/fonts/ATCArquette-Regular.woff2") format("woff2"),
     url("/assets/fonts/ATCArquette-Regular.woff") format("woff");
@@ -20,7 +10,27 @@
 
 @font-face {
   font-display: swap;
-  font-family: "ATC Harris";
+  font-family: "ATC Arquette Bold";
+  src: url("/assets/fonts/ATCArquette-Bold.woff2") format("woff2"),
+    url("/assets/fonts/ATCArquette-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ATC Harris Regular";
+  src: url("/assets/fonts/ATCHarris-Regular.woff2") format("woff2"),
+    url("/assets/fonts/ATCHarris-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ATC Harris Bold";
   src: url("/assets/fonts/ATCHarris-Bold.woff2") format("woff2"),
     url("/assets/fonts/ATCHarris-Bold.woff") format("woff");
   font-weight: normal;

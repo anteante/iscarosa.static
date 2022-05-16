@@ -132,14 +132,6 @@ button:focus {
 
 @font-face {
   font-display: swap;
-  font-family: "ATC Arquette Bold";
-  src: url("/assets/fonts/ATCArquette-Bold.woff2") format("woff2"), url("/assets/fonts/ATCArquette-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-display: swap;
   font-family: "ATC Arquette Regular";
   src: url("/assets/fonts/ATCArquette-Regular.woff2") format("woff2"), url("/assets/fonts/ATCArquette-Regular.woff") format("woff");
   font-weight: normal;
@@ -148,7 +140,23 @@ button:focus {
 
 @font-face {
   font-display: swap;
-  font-family: "ATC Harris";
+  font-family: "ATC Arquette Bold";
+  src: url("/assets/fonts/ATCArquette-Bold.woff2") format("woff2"), url("/assets/fonts/ATCArquette-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-display: swap;
+  font-family: "ATC Harris Regular";
+  src: url("/assets/fonts/ATCHarris-Regular.woff2") format("woff2"), url("/assets/fonts/ATCHarris-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-display: swap;
+  font-family: "ATC Harris Bold";
   src: url("/assets/fonts/ATCHarris-Bold.woff2") format("woff2"), url("/assets/fonts/ATCHarris-Bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -190,12 +198,11 @@ button:focus {
   margin-bottom: 2rem;
   display: flex; }
 
-.site__logo {
-  flex: 1 0 50%; }
-
-.logo {
-  width: 50%;
-  min-width: 16rem; }
+.site__title {
+  font-family: "ATC Harris-Regular", monospace; }
+  .site__title a {
+    font-family: "ATC Harris-Bold", monospace;
+    color: red; }
 
 nav a {
   border-bottom: 1px solid transparent;
@@ -332,6 +339,9 @@ h5,
 h6 {
   line-height: 1;
   font-weight: normal; }
+
+h1 {
+  font-family: "ATC Harris-Bold", monospace; }
 
 h3 {
   margin-bottom: 1.5rem; }

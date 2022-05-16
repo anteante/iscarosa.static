@@ -4,13 +4,12 @@
   display: flex;
 }
 
-.site__logo {
-  flex: 1 0 50%;
-}
-
-.logo {
-  width: 50%;
-  min-width: 16rem;
+.site__title {
+  font-family: $mono;
+  a {
+    font-family: $head;
+    color: red;
+  }
 }
 
 nav a {

@@ -44,6 +44,10 @@ h6 {
   font-weight: normal;
 }
 
+h1 {
+  font-family: $head;
+}
+
 h3 {
   @extend .smallprint;
   margin-bottom: 1.5rem;

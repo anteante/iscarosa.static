@@ -1,0 +1,50 @@
+@mixin opacity($value) {
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $value * 100+")"; /* IE 8 */
+  filter: alpha(opacity=$value * 100); /* IE 5-7 */
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// BREAKPOINTS
+
+@mixin smm {
+  @media screen and (max-width: #{$screen-small}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (min-width: #{$screen-small}) {
+    @content;
+  }
+}
+
+@mixin mdm {
+  @media screen and (max-width: #{$screen-medium}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: #{$screen-medium}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: #{$screen-large}) {
+    @content;
+  }
+}
+
+@mixin hg {
+  @media screen and (min-width: #{$screen-huge}) {
+    @content;
+  }
+}

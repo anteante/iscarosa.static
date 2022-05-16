@@ -1,0 +1,39 @@
+.site__footer {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid $prim;
+  padding-top: 2rem;
+  display: flex;
+}
+
+.site__icon {
+  flex: 1 0 50%;
+}
+
+.icon {
+  width: 20%;
+  min-width: 100px;
+}
+
+footer nav {
+  font-size: 1rem;
+  font-family: $sans;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  @include sm {
+    font-size: 0.8rem;
+  }
+}
+
+.footernav {
+  flex: 1 0 50%;
+  line-height: 1.8;
+  @include md {
+    display: flex;
+    margin-left: 1rem;
+  }
+  ul {
+    flex: 1 0 50%;
+    line-height: 2;
+  }
+}

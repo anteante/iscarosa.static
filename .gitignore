@@ -1,0 +1,22 @@
+# Folders
+_bu/
+
+# OSX
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# SASS
+.sass-cache
+
+# Editors
+# ---------------
+.nova
+*.sublime-project
+*.sublime-workspace
+/.vscode
+/.idea

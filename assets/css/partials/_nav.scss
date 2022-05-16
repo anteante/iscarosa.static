@@ -1,0 +1,111 @@
+.site__header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+.site__logo {
+  flex: 1 0 50%;
+}
+
+.logo {
+  width: 50%;
+  min-width: 16rem;
+}
+
+nav a {
+  border-bottom: 1px solid transparent;
+  transition: all ease-in-out 0.3s;
+  &:hover,
+  .current {
+    border-bottom: 1px solid $prim;
+  }
+}
+
+// MAIN NAV
+
+nav {
+  font-size: 1.2rem;
+  font-family: $sans;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  @include sm {
+    font-size: 0.8rem;
+  }
+}
+
+// MOBILE
+
+@include mdm {
+  #navicon {
+    position: absolute;
+    right: var(--site-spacing);
+    top: 1.4rem;
+    z-index: 2;
+  }
+
+  .mainnav {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 3rem;
+    background: $bgco;
+    z-index: 1;
+  }
+
+  .mainnav__list {
+    text-align: center;
+  }
+
+  .mainnav__item {
+    padding: 2rem 0;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .mainnav--closed {
+    height: auto;
+    position: inline;
+    background: transparent;
+  }
+
+  .mainnav--closed .mainnav__list {
+    display: none;
+  }
+}
+
+// DESKTOP
+
+@include md {
+  #navicon {
+    display: none;
+  }
+
+  .mainnav {
+    flex: 1 0 50%;
+    line-height: 1.8;
+    @include md {
+      margin-left: 1rem;
+    }
+  }
+
+  .mainnav__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  // Change order in grid view
+
+  .mainnav__list li:nth-child(3) {
+    order: 2;
+  }
+  .mainnav__list li:nth-child(2) {
+    order: 3;
+  }
+  .mainnav__list li:nth-child(4) {
+    order: 4;
+  }
+}

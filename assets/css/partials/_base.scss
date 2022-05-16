@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  color: $prim;
+}
+
+body {
+  font-family: $sans;
+  min-height: 100vh;
+}
+
+// LINKS
+
+a {
+  color: $prim;
+  text-decoration: none;
+}
+
+p a {
+  border-bottom: 1px solid $prim;
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    border-bottom: 1px solid #999;
+  }
+}
+
+// IMAGES
+
+figure {
+  margin-bottom: 1.5rem;
+}
+
+figcaption {
+  text-align: right;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  color: lighten($prim, 20%);
+}

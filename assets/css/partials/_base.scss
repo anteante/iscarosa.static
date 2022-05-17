@@ -5,9 +5,14 @@ body {
 
 html {
   color: $prim;
+  font-size: 18px;
+  @include hg {
+    font-size: 22px;
+  }
 }
 
 body {
+  background: $bgco;
   font-family: $sans;
   min-height: 100vh;
 }

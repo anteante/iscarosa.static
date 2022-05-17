@@ -3,13 +3,6 @@ html {
   text-align: left;
 }
 
-html {
-  font-size: 18px;
-  @include hg {
-    font-size: 22px;
-  }
-}
-
 // TEXT UTILS
 
 .text--bold {
@@ -44,13 +37,22 @@ h6 {
   font-weight: normal;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: $head;
+  margin-bottom: 1.5rem;
 }
 
+h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 1.3rem;
+}
 h3 {
-  @extend .smallprint;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
 p {

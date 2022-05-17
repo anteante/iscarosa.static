@@ -6,9 +6,12 @@
 
 .site__title {
   font-family: $mono;
+  font-size: 0.9rem;
   a {
     font-family: $head;
-    color: red;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    margin-right: 1.6rem;
   }
 }
 
@@ -24,12 +27,45 @@ nav a {
 // MAIN NAV
 
 nav {
-  font-size: 1.2rem;
-  font-family: $sans;
+  font-size: 1rem;
+  font-family: $head;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   @include sm {
     font-size: 0.8rem;
+  }
+}
+
+.mainnav {
+  margin-left: auto;
+}
+
+.mainnav__list {
+  display: flex;
+  margin-left: auto;
+}
+
+.mainnav__item {
+  margin-left: 0.5rem;
+}
+
+.nav__button {
+  background: $prim;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid $prim;
+  color: $bgco;
+  &:hover {
+    background: #4c4c4c;
+  }
+}
+.nav__button--inv {
+  background: $bgco;
+  color: $prim;
+  &:hover {
+    background: $prim;
+    color: $bgco;
   }
 }
 
@@ -54,15 +90,7 @@ nav {
     z-index: 1;
   }
 
-  .mainnav__list {
-    text-align: center;
-  }
-
   .mainnav__item {
-    padding: 2rem 0;
-    &:last-child {
-      border-bottom: none;
-    }
   }
 
   .mainnav--closed {
@@ -81,30 +109,5 @@ nav {
 @include md {
   #navicon {
     display: none;
-  }
-
-  .mainnav {
-    flex: 1 0 50%;
-    line-height: 1.8;
-    @include md {
-      margin-left: 1rem;
-    }
-  }
-
-  .mainnav__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  // Change order in grid view
-
-  .mainnav__list li:nth-child(3) {
-    order: 2;
-  }
-  .mainnav__list li:nth-child(2) {
-    order: 3;
-  }
-  .mainnav__list li:nth-child(4) {
-    order: 4;
   }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -67,9 +68,14 @@ body {
   height: 100%; }
 
 html {
-  color: #222222; }
+  color: #222222;
+  font-size: 18px; }
+  @media screen and (min-width: 1600px) {
+    html {
+      font-size: 22px; } }
 
 body {
+  background: #f1f1f1;
   font-family: "ATC Arquette Regular", sans-serif;
   min-height: 100vh; }
 
@@ -170,7 +176,12 @@ button:focus {
     --site-spacing: 2rem; } }
 
 .outer {
-  margin: 0 var(--site-spacing); }
+  margin-left: var(--site-spacing);
+  margin-right: var(--site-spacing); }
+
+.outer--pad {
+  padding-left: var(--site-spacing);
+  padding-right: var(--site-spacing); }
 
 .inner {
   max-width: 1920px;
@@ -199,10 +210,13 @@ button:focus {
   display: flex; }
 
 .site__title {
-  font-family: "ATC Harris-Regular", monospace; }
+  font-family: "ATC Harris Regular", monospace;
+  font-size: 0.9rem; }
   .site__title a {
-    font-family: "ATC Harris-Bold", monospace;
-    color: red; }
+    font-family: "ATC Harris Bold", monospace;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    margin-right: 1.6rem; }
 
 nav a {
   border-bottom: 1px solid transparent;
@@ -212,13 +226,40 @@ nav a {
     border-bottom: 1px solid #222222; }
 
 nav {
-  font-size: 1.2rem;
-  font-family: "ATC Arquette Regular", sans-serif;
+  font-size: 1rem;
+  font-family: "ATC Harris Bold", monospace;
   text-transform: uppercase;
   letter-spacing: 0.05rem; }
   @media screen and (min-width: 600px) {
     nav {
       font-size: 0.8rem; } }
+
+.mainnav {
+  margin-left: auto; }
+
+.mainnav__list {
+  display: flex;
+  margin-left: auto; }
+
+.mainnav__item {
+  margin-left: 0.5rem; }
+
+.nav__button {
+  background: #222222;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid #222222;
+  color: #f1f1f1; }
+  .nav__button:hover {
+    background: #4c4c4c; }
+
+.nav__button--inv {
+  background: #f1f1f1;
+  color: #222222; }
+  .nav__button--inv:hover {
+    background: #222222;
+    color: #f1f1f1; }
 
 @media screen and (max-width: 960px) {
   #navicon {
@@ -233,14 +274,8 @@ nav {
     left: 0;
     top: 0;
     padding-top: 3rem;
-    background: #f2f2f2;
+    background: #f1f1f1;
     z-index: 1; }
-  .mainnav__list {
-    text-align: center; }
-  .mainnav__item {
-    padding: 2rem 0; }
-    .mainnav__item:last-child {
-      border-bottom: none; }
   .mainnav--closed {
     height: auto;
     position: inline;
@@ -250,68 +285,38 @@ nav {
 
 @media screen and (min-width: 960px) {
   #navicon {
-    display: none; }
-  .mainnav {
-    flex: 1 0 50%;
-    line-height: 1.8; } }
-  @media screen and (min-width: 960px) and (min-width: 960px) {
-    .mainnav {
-      margin-left: 1rem; } }
+    display: none; } }
 
-@media screen and (min-width: 960px) {
-  .mainnav__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr; }
-  .mainnav__list li:nth-child(3) {
-    order: 2; }
-  .mainnav__list li:nth-child(2) {
-    order: 3; }
-  .mainnav__list li:nth-child(4) {
-    order: 4; } }
+footer ul {
+  list-style: none;
+  padding: 0; }
 
 .site__footer {
   margin-top: 8rem;
-  margin-bottom: 2rem;
-  border-top: 1px solid #222222;
   padding-top: 2rem;
-  display: flex; }
+  padding-bottom: 2rem;
+  display: flex;
+  background-color: #c6afa3; }
+  .site__footer h3 {
+    text-transform: uppercase; }
 
-.site__icon {
-  flex: 1 0 50%; }
+.footer__listblock {
+  font-family: "ATC Harris Regular", monospace;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  flex: 1 0 25%; }
 
-.icon {
-  width: 20%;
-  min-width: 100px; }
+.lang__switch li {
+  display: inline-block; }
+  .lang__switch li:first-child:after {
+    content: " ·"; }
 
-footer nav {
-  font-size: 1rem;
-  font-family: "ATC Arquette Regular", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem; }
-  @media screen and (min-width: 600px) {
-    footer nav {
-      font-size: 0.8rem; } }
-
-.footernav {
-  flex: 1 0 50%;
-  line-height: 1.8; }
-  @media screen and (min-width: 960px) {
-    .footernav {
-      display: flex;
-      margin-left: 1rem; } }
-  .footernav ul {
-    flex: 1 0 50%;
-    line-height: 2; }
+li.lang--active a {
+  font-family: "ATC Harris Bold", monospace; }
 
 html {
   -webkit-font-smoothing: antialiased;
   text-align: left; }
-
-html {
-  font-size: 18px; }
-  @media screen and (min-width: 1600px) {
-    html {
-      font-size: 22px; } }
 
 .text--bold {
   font-style: bold; }
@@ -340,11 +345,21 @@ h6 {
   line-height: 1;
   font-weight: normal; }
 
+h1,
+h2,
+h3 {
+  font-family: "ATC Harris Bold", monospace;
+  margin-bottom: 1.5rem; }
+
 h1 {
-  font-family: "ATC Harris-Bold", monospace; }
+  font-size: 1.6rem;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 1.3rem; }
 
 h3 {
-  margin-bottom: 1.5rem; }
+  font-size: 1rem; }
 
 p {
   margin-bottom: 1.5rem; }
@@ -352,7 +367,7 @@ p {
 strong {
   font-weight: bold; }
 
-.smallprint, h3 {
+.smallprint {
   font-family: "ATC Arquette Regular", sans-serif;
   font-size: 0.8rem; }
 

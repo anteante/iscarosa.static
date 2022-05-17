@@ -1,43 +1,47 @@
 :root {
-	--site-spacing: 1rem;
+  --site-spacing: 1rem;
 }
 
-@include md {                             
-	:root {
-	--site-spacing: 2rem;
-	}
+@include md {
+  :root {
+    --site-spacing: 2rem;
+  }
 }
 
 .outer {
-	margin: 0 var(--site-spacing);
+  margin-left: var(--site-spacing);
+  margin-right: var(--site-spacing);
+}
+.outer--pad {
+  padding-left: var(--site-spacing);
+  padding-right: var(--site-spacing);
 }
 
-.inner   {
-	max-width: 1920px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: var(--site-spacing);
-	padding-right: var(--site-spacing);
+.inner {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--site-spacing);
+  padding-right: var(--site-spacing);
 }
 
 .main {
-	margin-top: 10rem;
+  margin-top: 10rem;
 }
 
 // LAYOUT
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .flex--res {
-	@include md {
-		display: flex;
-	}
+  @include md {
+    display: flex;
+  }
 }
 
 .center {
-	margin-left: auto;
-	margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-

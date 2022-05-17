@@ -1,39 +1,32 @@
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
 .site__footer {
   margin-top: 8rem;
-  margin-bottom: 2rem;
-  border-top: 1px solid $prim;
   padding-top: 2rem;
+  padding-bottom: 2rem;
   display: flex;
-}
-
-.site__icon {
-  flex: 1 0 50%;
-}
-
-.icon {
-  width: 20%;
-  min-width: 100px;
-}
-
-footer nav {
-  font-size: 1rem;
-  font-family: $sans;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  @include sm {
-    font-size: 0.8rem;
+  background-color: $sand;
+  h3 {
+    text-transform: uppercase;
   }
 }
 
-.footernav {
-  flex: 1 0 50%;
+.footer__listblock {
+  font-family: $mono;
+  font-size: 0.9rem;
   line-height: 1.8;
-  @include md {
-    display: flex;
-    margin-left: 1rem;
+  flex: 1 0 25%;
+}
+
+.lang__switch li {
+  display: inline-block;
+  &:first-child:after {
+    content: " ·";
   }
-  ul {
-    flex: 1 0 50%;
-    line-height: 2;
-  }
+}
+li.lang--active a {
+  font-family: $head;
 }

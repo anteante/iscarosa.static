@@ -14,3 +14,14 @@
     }
   }
 }
+
+summary {
+  font-family: $bold;
+  border-top: 1px solid $lgry;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+details p {
+  margin: 1rem 0 2rem;
+}

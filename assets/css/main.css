@@ -263,6 +263,16 @@ button:focus {
     .list__bord li:hover {
       border-bottom: 1px solid #222222; }
 
+summary {
+  font-family: "ATC Arquette Bold", sans-serif;
+  border-top: 1px solid #cccccc;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer; }
+
+details p {
+  margin: 1rem 0 2rem; }
+
 .site__header {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -372,9 +382,8 @@ nav {
   .subnav__mobile li:not(:last-child) {
     border-bottom: 1px solid #cccccc; }
 
-.article__intro {
-  border-bottom: 1px solid #cccccc;
-  padding-bottom: 6rem; }
+.overview {
+  border-top: 1px solid #cccccc; }
 
 .overview__entry {
   border-bottom: 1px solid #cccccc;
@@ -649,6 +658,12 @@ strong {
 .py-8 {
   padding-top: 8rem;
   padding-bottom: 8rem; }
+
+.article__intro {
+  padding-bottom: 6rem; }
+
+section {
+  padding: 2rem 0; }
 
 /*!
  * Hamburgers

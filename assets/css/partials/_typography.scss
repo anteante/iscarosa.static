@@ -63,6 +63,11 @@ strong {
   font-weight: bold;
 }
 
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .smallprint {
   font-family: $sans;
   font-size: 0.8rem;

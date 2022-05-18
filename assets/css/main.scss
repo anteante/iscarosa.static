@@ -6,11 +6,17 @@
 @import "partials/buttons";
 @import "partials/fonts";
 @import "partials/layout";
+@import "partials/lists";
 @import "partials/nav";
+@import "partials/sidebar";
+@import "partials/overview";
 @import "partials/footer";
 @import "partials/typography";
 @import "partials/utility";
 
+
 // sections
+@import "sections/practice";
+
 // dist
 @import "dist/hamburgers/hamburgers";

@@ -1,0 +1,25 @@
+.article__intro {
+  border-bottom: 1px solid $lgry;
+  padding-bottom: 6rem;
+}
+
+.overview__entry {
+  @include md {
+    display: flex;
+  }
+
+  border-bottom: 1px solid $lgry;
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+}
+
+.entry__text {
+  @include md {    
+  flex: 1 0 50%;
+  margin-right: 2rem;
+  }
+}
+
+.readmore {
+  margin: 2rem 0;
+}

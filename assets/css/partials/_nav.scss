@@ -46,27 +46,7 @@ nav {
 }
 
 .mainnav__item {
-  margin-left: 0.5rem;
-}
-
-.nav__button {
-  background: $prim;
-  padding: 0.4rem 1.2rem;
-  border-radius: 1rem;
-  text-align: center;
-  border: 1px solid $prim;
-  color: $bgco;
-  &:hover {
-    background: #4c4c4c;
-  }
-}
-.nav__button--inv {
-  background: $bgco;
-  color: $prim;
-  &:hover {
-    background: $prim;
-    color: $bgco;
-  }
+  margin-left: 1rem;
 }
 
 // MOBILE

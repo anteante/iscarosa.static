@@ -51,6 +51,10 @@ textarea,
 select {
   font: inherit; }
 
+nav ul {
+  list-style: none;
+  padding-left: 0; }
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -83,11 +87,13 @@ a {
   color: #222222;
   text-decoration: none; }
 
-p a {
+p a,
+.underline a {
   border-bottom: 1px solid #222222;
   transition: all ease-in-out 0.3s; }
-  p a:hover {
-    border-bottom: 1px solid #999; }
+  p a:hover,
+  .underline a:hover {
+    border-bottom: 1px solid #cccccc; }
 
 figure {
   margin-bottom: 1.5rem; }
@@ -252,8 +258,10 @@ button:focus {
     font-family: "ATC Harris Regular", monospace;
     font-size: 0.9rem;
     padding: 0.25rem 0;
-    border-bottom: 1px solid #cccccc;
-    line-height: 2; }
+    line-height: 2;
+    border-bottom: 1px solid #cccccc; }
+    .list__bord li:hover {
+      border-bottom: 1px solid #222222; }
 
 .site__header {
   margin-top: 2rem;
@@ -350,6 +358,20 @@ nav {
     background: #222222;
     color: #f1f1f1; }
 
+@media screen and (max-width: 960px) {
+  .about__link {
+    margin-top: 2rem; } }
+
+.subnav__mobile {
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem; }
+  .subnav__mobile li {
+    padding: 1rem 0;
+    font-size: 0.9rem; }
+  .subnav__mobile li:not(:last-child) {
+    border-bottom: 1px solid #cccccc; }
+
 .article__intro {
   border-bottom: 1px solid #cccccc;
   padding-bottom: 6rem; }
@@ -391,6 +413,8 @@ footer ul {
   line-height: 1.8;
   flex: 1 0 25%;
   margin-bottom: 2rem; }
+  .footer__listblock a:hover {
+    border-bottom: 1px solid #222222; }
 
 .lang__switch li {
   display: inline-block; }

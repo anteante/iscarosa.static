@@ -7,7 +7,10 @@
     font-family: $mono;
     font-size: 0.9rem;
     padding: 0.25rem 0;
-    border-bottom: 1px solid $lgry;
     line-height: 2;
+    border-bottom: 1px solid $lgry;
+    &:hover {
+      border-bottom: 1px solid $prim;
+    }
   }
 }

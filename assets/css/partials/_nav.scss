@@ -92,7 +92,6 @@ nav {
   }
 }
 
-
 .nav__button {
   background: $prim;
   padding: 0.4rem 1.2rem;
@@ -121,6 +120,26 @@ nav {
   }
 }
 
+.about__link {
+  @include md-max {
+    margin-top: 2rem;
+  }
+}
+
+// SUBNAV MOBILE
+
+.subnav__mobile {
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  li {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  li:not(:last-child) {
+    border-bottom: 1px solid $lgry;
+  }
+}
 
 
 

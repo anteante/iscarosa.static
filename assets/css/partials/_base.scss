@@ -24,11 +24,12 @@ a {
   text-decoration: none;
 }
 
-p a {
+p a,
+.underline a {
   border-bottom: 1px solid $prim;
   transition: all ease-in-out 0.3s;
   &:hover {
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid $lgry;
   }
 }
 

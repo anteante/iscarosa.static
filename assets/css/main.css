@@ -136,23 +136,6 @@ button:focus {
   outline: none;
   outline-offset: 0; }
 
-.nav__button {
-  background: #222222;
-  padding: 0.4rem 1.2rem;
-  border-radius: 1rem;
-  text-align: center;
-  border: 1px solid #222222;
-  color: #f1f1f1; }
-  .nav__button:hover {
-    background: #4c4c4c; }
-
-.nav__button--inv {
-  background: #f1f1f1;
-  color: #222222; }
-  .nav__button--inv:hover {
-    background: #222222;
-    color: #f1f1f1; }
-
 .button__small {
   background: none;
   font-family: "ATC Harris Bold", monospace;
@@ -302,41 +285,70 @@ nav {
     nav {
       font-size: 0.8rem; } }
 
-.mainnav {
-  margin-left: auto; }
-
-.mainnav__list {
-  display: flex;
-  margin-left: auto; }
-
-.mainnav__item {
-  margin-left: 1rem; }
-
 @media screen and (max-width: 960px) {
   #navicon {
     position: absolute;
     right: var(--site-spacing);
     top: 1.4rem;
-    z-index: 2; }
+    z-index: 2; } }
+
+@media screen and (min-width: 960px) {
+  #navicon {
+    display: none; } }
+
+@media screen and (max-width: 960px) {
   .mainnav {
     width: 100%;
     height: 100vh;
     position: absolute;
     left: 0;
     top: 0;
-    padding-top: 3rem;
+    padding-top: 6rem;
     background: #f1f1f1;
     z-index: 1; }
   .mainnav--closed {
     height: auto;
-    position: inline;
     background: transparent; }
   .mainnav--closed .mainnav__list {
-    display: none; } }
+    display: none; }
+  .mainnav__list {
+    text-align: center; }
+  .mainnav__item {
+    padding: .5rem 0; } }
+
+.mainnav {
+  margin-left: auto; }
 
 @media screen and (min-width: 960px) {
-  #navicon {
-    display: none; } }
+  .mainnav__list {
+    display: flex; }
+  .mainnav__item {
+    margin-left: 1rem; } }
+
+.nav__button {
+  background: #222222;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid #222222;
+  color: #f1f1f1; }
+  .nav__button:hover {
+    background: #222222; }
+  @media screen and (max-width: 960px) {
+    .nav__button {
+      font-size: 1.2rem;
+      display: block;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      padding: 1rem 1.2rem;
+      border-radius: 2rem; } }
+
+.nav__button--inv {
+  background: #f1f1f1;
+  color: #222222; }
+  .nav__button--inv:hover {
+    background: #222222;
+    color: #f1f1f1; }
 
 .article__intro {
   border-bottom: 1px solid #cccccc;
@@ -366,8 +378,10 @@ footer ul {
   margin-top: 8rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  display: flex;
   background-color: #c6afa3; }
+  @media screen and (min-width: 960px) {
+    .site__footer {
+      display: flex; } }
   .site__footer h3 {
     text-transform: uppercase; }
 
@@ -375,7 +389,8 @@ footer ul {
   font-family: "ATC Harris Regular", monospace;
   font-size: 0.9rem;
   line-height: 1.8;
-  flex: 1 0 25%; }
+  flex: 1 0 25%;
+  margin-bottom: 2rem; }
 
 .lang__switch li {
   display: inline-block; }

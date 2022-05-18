@@ -24,8 +24,6 @@ nav a {
   }
 }
 
-// MAIN NAV
-
 nav {
   font-size: 1rem;
   font-family: $head;
@@ -36,28 +34,23 @@ nav {
   }
 }
 
-.mainnav {
-  margin-left: auto;
-}
+// NAV ICON
 
-.mainnav__list {
-  display: flex;
-  margin-left: auto;
-}
-
-.mainnav__item {
-  margin-left: 1rem;
-}
-
-// MOBILE
-
-@include mdm {
-  #navicon {
+#navicon {
+  @include md-max {
     position: absolute;
     right: var(--site-spacing);
     top: 1.4rem;
     z-index: 2;
   }
+  @include md {
+      display: none;
+    }
+}
+
+// MAIN NAV STYLING
+
+@include md-max {
 
   .mainnav {
     width: 100%;
@@ -65,29 +58,72 @@ nav {
     position: absolute;
     left: 0;
     top: 0;
-    padding-top: 3rem;
+    padding-top: 6rem;
     background: $bgco;
     z-index: 1;
   }
 
-  .mainnav__item {
-  }
-
   .mainnav--closed {
     height: auto;
-    position: inline;
     background: transparent;
   }
 
   .mainnav--closed .mainnav__list {
     display: none;
   }
+  .mainnav__list {
+    text-align: center;
+  }
+  .mainnav__item {
+    padding: .5rem 0;
+  } 
 }
 
-// DESKTOP
+.mainnav {
+  margin-left: auto;
+}
 
 @include md {
-  #navicon {
-    display: none;
+  .mainnav__list {
+    display: flex;
+  }
+ .mainnav__item {  
+    margin-left: 1rem;  
   }
 }
+
+
+.nav__button {
+  background: $prim;
+  padding: 0.4rem 1.2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid $prim;
+  color: $bgco;
+  &:hover {
+    background:  $prim;
+  }
+  @include md-max {
+    font-size: 1.2rem;
+    display: block;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1rem 1.2rem;
+    border-radius: 2rem;
+  }
+}
+.nav__button--inv {
+  background: $bgco;
+  color: $prim;
+  &:hover {
+    background: $prim;
+    color: $bgco;
+  }
+}
+
+
+
+
+
+
+
